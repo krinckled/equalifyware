@@ -3,7 +3,7 @@ local StarterGui = game:GetService("StarterGui")
 local LocalPlayer = Players.LocalPlayer
 
 local ScreenGui = Instance.new("ScreenGui")
-local swagUI = Instance.new("Frame")
+local equalifyUI = Instance.new("Frame")
 local tabContents = Instance.new("Frame")
 local logoLabel = Instance.new("TextLabel")
 local MovementTab = Instance.new("TextButton")
@@ -104,16 +104,16 @@ ScreenGui.Parent = LocalPlayer:FindFirstChildOfClass("PlayerGui")
 ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-swagUI.Name = "swagUI"
-swagUI.Parent = ScreenGui
-swagUI.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
-swagUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
-swagUI.BorderSizePixel = 0
-swagUI.Position = UDim2.new(0.0187896155, 0, 0.087064676, 0)
-swagUI.Size = UDim2.new(0, 368, 0, 510)
+equalifyUI.Name = "equalifyUI"
+equalifyUI.Parent = ScreenGui
+equalifyUI.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+equalifyUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+equalifyUI.BorderSizePixel = 0
+equalifyUI.Position = UDim2.new(0.0187896155, 0, 0.087064676, 0)
+equalifyUI.Size = UDim2.new(0, 368, 0, 510)
 
 tabContents.Name = "tabContents"
-tabContents.Parent = swagUI
+tabContents.Parent = equalifyUI
 tabContents.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 tabContents.BorderColor3 = Color3.fromRGB(0, 0, 0)
 tabContents.BorderSizePixel = 0
@@ -129,7 +129,7 @@ logoLabel.BorderSizePixel = 0
 logoLabel.Position = UDim2.new(0.0191026609, 0, 0.197614491, 0)
 logoLabel.Size = UDim2.new(0, 87, 0, 13)
 logoLabel.Font = Enum.Font.RobotoMono
-logoLabel.Text = "swag v1.18"
+logoLabel.Text = "equalify"
 logoLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 logoLabel.TextSize = 18.000
 
@@ -195,7 +195,7 @@ Frame.Position = UDim2.new(-4.33488339e-08, 0, 1, 0)
 Frame.Size = UDim2.new(0, 352, 0, 2)
 
 MovementContents.Name = "MovementContents"
-MovementContents.Parent = swagUI
+MovementContents.Parent = equalifyUI
 MovementContents.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 MovementContents.BorderColor3 = Color3.fromRGB(15, 15, 15)
 MovementContents.BorderSizePixel = 0
@@ -531,7 +531,7 @@ keybindButton3.TextColor3 = Color3.fromRGB(255, 255, 255)
 keybindButton3.TextSize = 14.000
 
 mainContent.Name = "mainContent"
-mainContent.Parent = swagUI
+mainContent.Parent = equalifyUI
 mainContent.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 mainContent.BorderColor3 = Color3.fromRGB(15, 15, 15)
 mainContent.BorderSizePixel = 0
@@ -796,7 +796,7 @@ TextButton_2.TextColor3 = Color3.fromRGB(178, 178, 178)
 TextButton_2.TextSize = 15.000
 
 miscContent.Name = "miscContent"
-miscContent.Parent = swagUI
+miscContent.Parent = equalifyUI
 miscContent.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 miscContent.BorderColor3 = Color3.fromRGB(15, 15, 15)
 miscContent.BorderSizePixel = 0
@@ -853,7 +853,7 @@ TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextSize = 19.000
 
 visContent.Name = "visContent"
-visContent.Parent = swagUI
+visContent.Parent = equalifyUI
 visContent.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 visContent.BorderColor3 = Color3.fromRGB(15, 15, 15)
 visContent.BorderSizePixel = 0
@@ -1033,7 +1033,7 @@ TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_12.BorderSizePixel = 0
 TextLabel_12.Size = UDim2.new(0, 74, 0, 23)
 TextLabel_12.Font = Enum.Font.RobotoMono
-TextLabel_12.Text = "swagWare"
+TextLabel_12.Text = "equalify"
 TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.TextSize = 16.000
 
@@ -1171,12 +1171,12 @@ local function UNXK_fake_script() -- tabContents.tabControl
 	
 end
 coroutine.wrap(UNXK_fake_script)()
-local function CAYPN_fake_script() -- swagUI.open&close 
-	local script = Instance.new('LocalScript', swagUI)
+local function CAYPN_fake_script() -- equalifyUI.open&close 
+	local script = Instance.new('LocalScript', equalifyUI)
 
 	local UIS = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
-	local swagUI = script.Parent
+	local equalifyUI = script.Parent
 	
 	local isVisible = true
 	local fadeTime = 0.3  -- Time it takes to fade in/out (in seconds)
@@ -1188,7 +1188,7 @@ local function CAYPN_fake_script() -- swagUI.open&close
 	
 		-- Create the tween to fade in or out
 		local tweenInfo = TweenInfo.new(fadeTime, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
-		local tween = TweenService:Create(swagUI, tweenInfo, {BackgroundTransparency = goalTransparency})
+		local tween = TweenService:Create(equalifyUI, tweenInfo, {BackgroundTransparency = goalTransparency})
 	
 		-- Play the tween to fade the UI element
 		tween:Play()
@@ -1197,7 +1197,7 @@ local function CAYPN_fake_script() -- swagUI.open&close
 		tween.Completed:Wait()
 	
 		-- Set the actual visibility once the tween completes
-		swagUI.Visible = isVisible
+		equalifyUI.Visible = isVisible
 	end
 	
 	UIS.InputBegan:Connect(function(input, gameProcessedEvent)
@@ -2153,8 +2153,8 @@ local function QYLJBEQ_fake_script() -- aimPartDropDown.LocalScript
 	
 end
 coroutine.wrap(QYLJBEQ_fake_script)()
-local function UNBBHM_fake_script() -- swagUI.auth 
-	local script = Instance.new('LocalScript', swagUI)
+local function UNBBHM_fake_script() -- equalifyUI.auth 
+	local script = Instance.new('LocalScript', equalifyUI)
 
 	local WhitelistedUsers = {
 		[7102405327] = true, 
@@ -2169,7 +2169,7 @@ local function UNBBHM_fake_script() -- swagUI.auth
 	local LocalPlayer = Players.LocalPlayer
 	
 	if not WhitelistedUsers[LocalPlayer.UserId] then
-		LocalPlayer:Kick("You do not have permission to execute this script.")
+		print("hahah")
 	else
 		print("Access granted.")
 		
